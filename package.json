@@ -1,0 +1,7 @@
+{
+  "description": "",
+  "dependencies": {
+    "inquirer": "^9.2.14",
+    "puppeteer": "^21.11.0"
+  }
+}
