@@ -125,6 +125,8 @@ async function parsePage(url, addres) {
 
   await page.screenshot({ path: PATH_SCREENSHOT, fullPage: true });
 
+  console.log(`Скриншот успешно сохранен в файл: ${PATH_SCREENSHOT}`);
+
   await browser.close();
 }
 
