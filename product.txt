@@ -1,0 +1,6 @@
+{
+  "price": "299 ₽/шт",
+  "priceOld": "499 ₽",
+  "ratig": "5.0",
+  "reviewCount": "1 отзыв"
+}
