@@ -150,7 +150,7 @@ async function getData(page) {
   try {
     await page.waitForSelector(SELECTOR_RATING, { timeout: TIMEOUT });
     const elementRating = await page.$(SELECTOR_RATING);
-    result.ratig = await getRating(elementRating);
+    result.ratig = await getInfo(elementRating);
   } catch (error) {
     console.error(
       "Произошла ошибка при ожидании селектора SELECTORRATING:",
@@ -162,7 +162,7 @@ async function getData(page) {
   try {
     await page.waitForSelector(SELECTOR_REVIEWS, { timeout: TIMEOUT });
     const elementReviews = await page.$(SELECTOR_REVIEWS);
-    result.reviewCount = await getReviews(elementReviews);
+    result.reviewCount = await getInfo(elementReviews);
   } catch (error) {
     console.error(
       "Произошла ошибка при ожидании селектора SELECTORREVIEWS:",
@@ -195,10 +195,6 @@ async function getPrice(element) {
   return result;
 }
 
-async function getRating(element) {
-  return await element.evaluate((el) => el.textContent);
-}
-
-async function getReviews(element) {
+async function getInfo(element) {
   return await element.evaluate((el) => el.textContent);
 }
